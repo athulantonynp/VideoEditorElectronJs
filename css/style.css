@@ -1,0 +1,45 @@
+html, body {
+  background-color: transparent;
+  user-select: none;
+}
+
+.btn:focus {
+  outline: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.output-content{
+ display: inline-flex;
+}
+
+#outpath{
+  margin-top:8px;
+  margin-left:16px;
+}
+
+#items-list-container{
+ margin:16px;
+}
+
+#btn-merge,#btn-clear,#spinner{
+ margin-top:32px;
+ margin-left:40px;
+}
+
+.output-name-content{
+ margin-left:40px;
+ margin-top:24px;
+}
+#btn-add-more{
+  margin-left:40px;
+}
+
+.start-merge-content{
+  display:inline-flex
+}
+
+
+.container{
+  margin: 16px !important;
+}

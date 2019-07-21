@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Video Editor V1</title>
+    <link rel = "stylesheet" type = "text/css" href = "./css/style.css" />
+    <link rel = "stylesheet" type = "text/css" href = "./css/toast.css" />
+  </head>
+  <body>
+      <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+              Video Editor V1
+          </ol>
+        </nav>
+    
+    <div class="container">
+      <button type="button"  id="btn-start" class="btn btn-outline-dark btn-sm">Merge Videos</button>
+
+      <div id="items-list-container">
+          <ul id="items-list"></ul>
+          <button type="button" id="btn-add-more" class="btn btn-outline-primary">Add More</button>
+
+          <div class="output-content">
+            <button class="btn btn-primary" id="btn-output" type="submit">Output Folder</button>
+            <div id="outpath"></div>
+          </div>
+          
+          <div class="output-name-content">
+              <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Output File Name</span>
+                  </div>
+                  <input id="input-file-name" type="text" class="form-control" aria-label="Enter output file name here.">
+                  <div class="input-group-append">
+                    <span class="input-group-text">.mp4</span>
+                  </div>
+                </div>
+          </div>
+          
+          <div class="start-merge-content">
+              <div class="spinner-grow" id="spinner" role="status">
+                  <span class="sr-only">Loading...</span>
+                </div>
+            <button type="button" id="btn-merge" class="btn btn-success">Start Merge</button>
+            <button type="button" id="btn-clear" class="btn btn-outline-secondary">Clear</button>
+          </div>
+      </div>
+
+    </div>
+  
+    <div id="snackbar"></div>
+  </body>
+
+  <script type="text/javascript" src="./script.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</html>
