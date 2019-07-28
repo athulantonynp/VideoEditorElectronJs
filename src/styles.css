@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+body {
+  display: block;
+  margin: 0px !important;
+  height: 100%;
+  padding: 0px !important;
+}
+
+* {
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+::-webkit-scrollbar {
+  width: 0 !important
+}
+
+::-webkit-scrollbar {
+  display: none;
+}

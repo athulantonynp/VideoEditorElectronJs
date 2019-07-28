@@ -1,0 +1,31 @@
+<div class="content-main" *ngIf="showContent()">
+
+<div class="path-list">
+<mat-card class="path-card">
+  <mat-list>
+    <mat-list-item *ngFor="let path of paths" >
+      <div matRipple class="list-ripple" >
+          <h3 matLine class="list-item"> {{getFileNameFromPath(path)}} </h3>
+          <mat-divider></mat-divider>
+      </div>
+    </mat-list-item>
+  </mat-list>
+</mat-card>
+</div>
+
+<div class="output-form">
+  <mat-form-field class="output-file-dir">
+     <input matInput placeholder="Location of output file" value="{{outputDir}}">
+     <button  mat-raised-button matSuffix color="primary"
+      (click)="onOutputLocationSelectClick()">Select</button>
+  </mat-form-field>
+  <mat-form-field class="output-file-name-field">
+    <input matInput placeholder="Enter output file name without extensions" value="{{outputName}}">
+  </mat-form-field>
+
+  <button mat-raised-button color="accent" (click)="onStartMergeClicked()">Start Merge</button>
+   <a class="btn-clear" (click)="onClearClicked()" mat-raised-button>Clear</a>
+</div>
+
+
+</div>

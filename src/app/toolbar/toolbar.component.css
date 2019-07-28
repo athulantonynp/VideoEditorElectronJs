@@ -1,0 +1,18 @@
+.toolbar_main {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+.mat-toolbar {
+  position: relative;
+}
+
+.mat-raised-button {
+  margin: 16px;
+
+}
+
+.button-text{
+  color: black;
+}

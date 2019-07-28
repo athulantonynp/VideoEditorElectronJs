@@ -1,0 +1,43 @@
+.content-main{
+  width: 100%;
+  margin-top: 120px;
+  padding: 16px;
+}
+
+.path-card{
+  margin:60px;
+}
+
+.list-item{
+  margin-left: 16px;
+  margin-right: 16px;
+  color: black;
+}
+
+.list-ripple{
+  width: 100%;
+}
+
+.mat-list-item{
+  margin-bottom: 16px;
+  margin-top: 16px;
+}
+
+.mat-list{
+  padding: 16px;
+}
+
+.output-form{
+  color: black;
+  padding: 60px;
+}
+
+.output-file-dir{
+  width: 100%;
+}
+.output-file-name-field{
+  width:100%;
+}
+.btn-clear{
+  margin-left: 16px;
+}
