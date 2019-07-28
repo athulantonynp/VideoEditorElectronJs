@@ -1,16 +1,26 @@
+<div class="main_tools">
+    <button mat-raised-button (click)="onAddMoreClicked()"><div class="button-text">Merge Videos</div></button>
+</div>
 <div class="content-main" *ngIf="showContent()">
-
 <div class="path-list">
-<mat-card class="path-card">
-  <mat-list>
-    <mat-list-item *ngFor="let path of paths" >
-      <div matRipple class="list-ripple" >
-          <h3 matLine class="list-item"> {{getFileNameFromPath(path)}} </h3>
-          <mat-divider></mat-divider>
-      </div>
-    </mat-list-item>
-  </mat-list>
-</mat-card>
+    <mat-accordion id="path-card">
+             <mat-expansion-panel *ngFor="let path of paths">
+            <mat-expansion-panel-header>
+                 <mat-panel-title>
+                {{path.name}}
+                 </mat-panel-title>
+               </mat-expansion-panel-header>
+               <mat-chip-list>
+                <mat-chip>{{path.meta.streams[0].codec_long_name}}</mat-chip>
+                <mat-chip>{{path.fileSize}}</mat-chip>
+                  <mat-chip>{{path.duration}}</mat-chip>
+                <mat-chip>{{path.resolution}}</mat-chip>
+                <mat-chip>{{path.videoFrameRate}}</mat-chip>
+                <mat-chip>{{path.audioFormat}}</mat-chip>
+                </mat-chip-list>
+             </mat-expansion-panel>
+        </mat-accordion>
+     <a class="btn-add-more" (click)="onAddMoreClicked()" mat-raised-button>Add More</a>
 </div>
 
 <div class="output-form">
@@ -22,9 +32,11 @@
   <mat-form-field class="output-file-name-field">
     <input matInput placeholder="Enter output file name without extensions" value="{{outputName}}">
   </mat-form-field>
-
-  <button mat-raised-button color="accent" (click)="onStartMergeClicked()">Start Merge</button>
-   <a class="btn-clear" (click)="onClearClicked()" mat-raised-button>Clear</a>
+  <mat-spinner [diameter]="36" class="output-progress"  *ngIf="isOnProgress===true"></mat-spinner>
+  <button mat-raised-button color="accent" (click)="onStartMergeClicked()"
+   *ngIf="isOnProgress===false">Start Merge</button>
+   <a class="btn-clear" (click)="onClearClicked()" mat-raised-button
+    *ngIf="isOnProgress===false">Clear</a>
 </div>
 
 

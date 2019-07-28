@@ -4,7 +4,7 @@ const url = require("url");
 const path = require("path");
 
 function createWindow () {
-  // Create the browser window.
+
   let win = new BrowserWindow({
     width: 800,
     height: 600,
@@ -17,10 +17,8 @@ function createWindow () {
   win.setMenuBarVisibility(false)
 
 
-  // and load the index.html of the app.
-//  win.loadURL(`file://${__dirname}/dist/video-editor-angular/index.html`)
-win.loadURL("http://localhost:4200/")
-  //win.webContents.openDevTools()
+  win.loadURL(`file://${__dirname}/dist/video-editor-angular/index.html`)
+  //win.loadURL("http://localhost:4200/")
 }
 
 

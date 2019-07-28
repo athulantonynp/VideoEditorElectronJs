@@ -1,11 +1,23 @@
 .content-main{
   width: 100%;
-  margin-top: 120px;
   padding: 16px;
 }
 
-.path-card{
-  margin:60px;
+.main_tools{
+  margin-top: 40px;
+}
+
+.mat-raised-button {
+  margin: 16px;
+
+}
+
+.button-text{
+  color: black;
+}
+
+.path-list{
+  margin: 60px;
 }
 
 .list-item{
@@ -40,4 +52,7 @@
 }
 .btn-clear{
   margin-left: 16px;
+}
+.btn-add-more{
+
 }

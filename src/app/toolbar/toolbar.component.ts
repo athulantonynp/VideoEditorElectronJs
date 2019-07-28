@@ -18,14 +18,6 @@ export class ToolbarComponent implements OnInit {
   ngOnInit() {
   }
 
-  onMergeClick(){
-    this._electronService.remote.dialog.showOpenDialog({ properties: ['openFile'] ,
-    filters: [  { name: 'Movies', extensions: ['mp4'] }]},(result,error)=>{
-      if(result!==null){
-          this.updatePathItems(result.toString())
-      }
-    });
-  }
 
   updatePathItems(path:String){
     this.eventService.sendEventMessage(path)
